@@ -12,7 +12,14 @@ public class randomPatrol : MonoBehaviour
 
     Vector2 targetPosition;
 
-    public float speed;
+    public float minSpeed;
+    public float maxSpeed;
+
+    float speed;
+
+    public float secondToMaxDifficulty;
+
+    public GameObject restartPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +32,9 @@ public class randomPatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if((Vector2)transform.position != targetPosition)
+        if ((Vector2)transform.position != targetPosition)
         {
+            speed = Mathf.Lerp(minSpeed, maxSpeed, GetDifficultyPercent());
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
         }
         else
@@ -44,9 +52,15 @@ public class randomPatrol : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "planets")
+        if (collision.tag == "planets")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            restartPanel.SetActive(true);
         }
+    }
+
+
+    float GetDifficultyPercent()
+    {
+        return Mathf.Clamp01(Time.timeSinceLevelLoad / secondToMaxDifficulty);
     }
 }
