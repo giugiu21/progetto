@@ -19,4 +19,9 @@ public class GameMaster : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void GoToLogin()
+    {
+        SceneManager.LoadScene("Login");
+    }
 }
