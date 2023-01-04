@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour
 {
+    public GameObject restartPanel;
+
+    public void GameOver()
+    {
+        restartPanel.SetActive(true);
+    }
+
     public void GoToGameScene()
     {
         SceneManager.LoadScene("Main");

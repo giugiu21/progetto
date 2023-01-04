@@ -19,7 +19,7 @@ public class randomPatrol : MonoBehaviour
 
     public float secondToMaxDifficulty;
 
-    public GameObject restartPanel;
+ 
 
     // Start is called before the first frame update
     void Start()
@@ -50,13 +50,13 @@ public class randomPatrol : MonoBehaviour
         return new Vector2(randomX, randomY);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "planets")
         {
             restartPanel.SetActive(true);
         }
-    }
+    }*/
 
 
     float GetDifficultyPercent()

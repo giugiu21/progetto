@@ -6,9 +6,12 @@ public class DragAndDrop : MonoBehaviour
 {
     bool moveAllowed;
     Collider2D col;
+    private GameMaster gm;
+
     // Start is called before the first frame update
     void Start()
     {
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         col = GetComponent<Collider2D>();
     }
 
@@ -42,6 +45,15 @@ public class DragAndDrop : MonoBehaviour
                 moveAllowed = false;
             }
 
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "planets")
+        {
+            gm.GameOver();
+            Destroy(gameObject);
         }
     }
 }

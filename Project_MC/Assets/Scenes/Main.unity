@@ -434,7 +434,6 @@ MonoBehaviour:
   minSpeed: 0.75
   maxSpeed: 3
   secondToMaxDifficulty: 60
-  restartPanel: {fileID: 199425773}
 --- !u!114 &306395741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -852,7 +851,7 @@ GameObject:
   - component: {fileID: 1161863537}
   m_Layer: 0
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: GM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -951,6 +950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a6fdd9ac3bf4e8b9ba8fdada182ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restartPanel: {fileID: 199425773}
 --- !u!1 &1599981045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,7 +1116,6 @@ MonoBehaviour:
   minSpeed: 0.75
   maxSpeed: 3
   secondToMaxDifficulty: 60
-  restartPanel: {fileID: 199425773}
 --- !u!114 &1657757449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1398,7 +1397,6 @@ MonoBehaviour:
   minSpeed: 0.75
   maxSpeed: 3
   secondToMaxDifficulty: 60
-  restartPanel: {fileID: 199425773}
 --- !u!114 &2031334005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1675,7 +1673,6 @@ MonoBehaviour:
   minSpeed: 0.75
   maxSpeed: 3
   secondToMaxDifficulty: 60
-  restartPanel: {fileID: 199425773}
 --- !u!114 &3373526214414729309
 MonoBehaviour:
   m_ObjectHideFlags: 0
