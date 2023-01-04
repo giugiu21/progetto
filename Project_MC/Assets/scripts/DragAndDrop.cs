@@ -50,7 +50,7 @@ public class DragAndDrop : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "planets")
+        if (collision.tag == "planets" || collision.tag == "bomb")
         {
             gm.GameOver();
             Destroy(gameObject);

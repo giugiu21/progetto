@@ -21,7 +21,7 @@ public class ShootingBehavior : MonoBehaviour
         }
         else
         {
-            timeBtwShot = Time.deltaTime;
+            timeBtwShot -= Time.deltaTime;
         }
     }
 }

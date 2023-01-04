@@ -6,6 +6,7 @@ TagManager:
   tags:
   - planets
   - GM
+  - bomb
   layers:
   - Default
   - TransparentFX
