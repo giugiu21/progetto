@@ -6,6 +6,7 @@ using PlayFab.ClientModels;
 //using NewtonSoft.Json;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 //using System.Diagnostics;
 
 public class PlayfabManager : MonoBehaviour
@@ -35,6 +36,12 @@ public class PlayfabManager : MonoBehaviour
     void OnRegisterSuccess(RegisterPlayFabUserResult result)
     {
         messageText.text = "Registered and logged in!";
+        Invoke("Delay", 2f);
+    }
+
+    void Delay()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void LoginButton()
@@ -51,6 +58,7 @@ public class PlayfabManager : MonoBehaviour
     {
         messageText.text = "Logged in!";
         Debug.Log("Successful login/account create");
+        Invoke("Delay", 2f);
     }
 
     public void ResetPasswordButton()
