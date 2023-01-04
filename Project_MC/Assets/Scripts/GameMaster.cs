@@ -14,7 +14,7 @@ public class GameMaster : MonoBehaviour
 
     public void GoToGameScene()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Lv-1");
     }
 
     public void Restart()
