@@ -16,7 +16,7 @@ public class ShootingBehavior : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer >= 0.75)
+        if (timer >= 1)
         {
             timer = 0;
             Shoot();
