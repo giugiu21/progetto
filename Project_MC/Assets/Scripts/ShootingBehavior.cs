@@ -7,21 +7,25 @@ public class ShootingBehavior : MonoBehaviour
     public Transform shotPos;
 
     public GameObject bomb;
-    private float timeBtwShot;
-    private float startTimeBtwShot;
 
+    private float timer;
+    
 
     // Update is called once per frame
     private void Update()
     {
-        if(timeBtwShot <= 0)
+        timer += Time.deltaTime;
+
+        if (timer >= 0.75)
         {
-            Instantiate(bomb, shotPos.position, Quaternion.identity);
-            timeBtwShot = startTimeBtwShot;
-        }
-        else
-        {
-            timeBtwShot -= Time.deltaTime;
+            timer = 0;
+            Shoot();
         }
     }
+
+    private void Shoot()
+    {
+        Instantiate(bomb, shotPos.position, Quaternion.identity);
+    }
+
 }

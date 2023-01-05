@@ -50,13 +50,7 @@ public class randomPatrol : MonoBehaviour
         return new Vector2(randomX, randomY);
     }
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "planets")
-        {
-            restartPanel.SetActive(true);
-        }
-    }*/
+    
 
 
     float GetDifficultyPercent()
