@@ -41,7 +41,7 @@ public class PlayfabManager : MonoBehaviour
 
     void Delay()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Lv-1");
     }
 
     public void LoginButton()

@@ -8,6 +8,8 @@ public class ShootingBehavior : MonoBehaviour
 
     public GameObject bomb;
 
+    public float shootingTime;
+
     private float timer;
     
 
@@ -16,7 +18,7 @@ public class ShootingBehavior : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer >= 1)
+        if (timer >= shootingTime)
         {
             timer = 0;
             Shoot();
@@ -25,7 +27,10 @@ public class ShootingBehavior : MonoBehaviour
 
     private void Shoot()
     {
-        Instantiate(bomb, shotPos.position, Quaternion.identity);
+        if (shotPos != null)
+        {
+            Instantiate(bomb, shotPos.position, Quaternion.identity);
+        }
     }
 
 }
