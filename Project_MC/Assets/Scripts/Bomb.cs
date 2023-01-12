@@ -12,9 +12,12 @@ public class Bomb : MonoBehaviour
 
     private GameMaster gm;
 
+    private Shake shake;
+
     // Start is called before the first frame update
     void Start()
     {
+        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         planets = GameObject.FindGameObjectsWithTag("planets");
 
@@ -37,6 +40,7 @@ public class Bomb : MonoBehaviour
     {
         if (other.CompareTag("planets"))
         {
+            shake.CamShake();
             gm.GameOver();
             Destroy(other.gameObject);
             Destroy(gameObject);

@@ -6,9 +6,12 @@ public class Meteors : MonoBehaviour
 {
     private GameMaster gm;
 
+    private Shake shake;
+
 
     void Start()
     {
+        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
     }
 
@@ -16,6 +19,7 @@ public class Meteors : MonoBehaviour
     {
         if (collision.tag == "planets")
         {
+            shake.CamShake();
             gm.GameOver();
             Destroy(gameObject);
         }
