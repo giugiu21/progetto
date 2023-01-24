@@ -10,6 +10,8 @@ public class GameMaster : MonoBehaviour
 
     public TextMeshProUGUI timerDisplay;
 
+    public GameObject nextLevelPanel;
+
     public float timer;
 
     private bool hasLost;
@@ -23,7 +25,14 @@ public class GameMaster : MonoBehaviour
 
         if(timer <= 0 && !hasLost)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            Pause();
+            if (SceneManager.GetActiveScene().name == "Lv-3")
+            {
+                Resume();
+                Invoke("Congrats", 0.6f);
+
+            }
+            nextLevelPanel.SetActive(true);
         }
         else
         {
@@ -31,16 +40,33 @@ public class GameMaster : MonoBehaviour
         }
     }
 
+    private void Congrats()
+    {
+        SceneManager.LoadScene("Congratulations");
+    }
+   
+   
+    public void Pause()
+    {
+        Time.timeScale = 0f;
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+    }
+
     public void GameOver()
     {
         hasLost = true;
-        Invoke("Delay", 1f);
-        
+        Invoke("Delay", 0.5f);
+
     }
 
     void Delay()
     {
         restartPanel.SetActive(true);
+        Pause();
     }
 
     public void GoToGameScene()

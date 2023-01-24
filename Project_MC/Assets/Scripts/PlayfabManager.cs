@@ -17,6 +17,9 @@ public class PlayfabManager : MonoBehaviour
     public TMP_InputField emailInput;
     public TMP_InputField passwordInput;
 
+
+    public GameObject readyToPlay;
+
     public void RegisterButton()
     {
         if(passwordInput.text.Length < 6)
@@ -41,7 +44,7 @@ public class PlayfabManager : MonoBehaviour
 
     void Delay()
     {
-        SceneManager.LoadScene("Lv-1");
+        readyToPlay.SetActive(true);
     }
 
     public void LoginButton()

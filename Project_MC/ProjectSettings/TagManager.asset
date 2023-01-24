@@ -9,6 +9,7 @@ TagManager:
   - bomb
   - meteor
   - ScreenShake
+  - countDownManager
   layers:
   - Default
   - TransparentFX
