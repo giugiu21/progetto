@@ -2630,7 +2630,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3167400144034038929, guid: 146caec47293347e19f6fcd1e27a1cd3, type: 3}
       propertyPath: shootingTime
-      value: 2.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3167400144034038930, guid: 146caec47293347e19f6fcd1e27a1cd3, type: 3}
       propertyPath: m_Name
