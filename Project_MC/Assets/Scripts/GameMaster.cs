@@ -76,11 +76,13 @@ public class GameMaster : MonoBehaviour
 
     public void Restart()
     {
+        Resume();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void GoToMainMenu()
     {
+        Resume();
         SceneManager.LoadScene("MainMenu");
     }
 
