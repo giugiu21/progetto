@@ -20,6 +20,7 @@ public class Meteors : MonoBehaviour
         if (collision.tag == "planets")
         {
             shake.CamShake();
+            FindObjectOfType<AudioManager>().Play("DeathSound");
             gm.GameOver();
             Destroy(gameObject);
         }

@@ -77,17 +77,16 @@ public class GameMaster : MonoBehaviour
     public void Restart()
     {
         Resume();
+        FindObjectOfType<AudioManager>().Play("Click");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void GoToMainMenu()
     {
         Resume();
+        FindObjectOfType<AudioManager>().Play("Click");
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void GoToLogin()
-    {
-        SceneManager.LoadScene("Login");
-    }
+    
 }

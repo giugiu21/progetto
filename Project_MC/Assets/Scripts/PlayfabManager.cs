@@ -22,7 +22,8 @@ public class PlayfabManager : MonoBehaviour
 
     public void RegisterButton()
     {
-        if(passwordInput.text.Length < 6)
+        FindObjectOfType<AudioManager>().Play("Click");
+        if (passwordInput.text.Length < 6)
         {
             messageText.text = "Password too short!";
             return;
@@ -49,6 +50,7 @@ public class PlayfabManager : MonoBehaviour
 
     public void LoginButton()
     {
+        FindObjectOfType<AudioManager>().Play("Click");
         var request = new LoginWithEmailAddressRequest
         {
             Email = emailInput.text,
@@ -66,6 +68,7 @@ public class PlayfabManager : MonoBehaviour
 
     public void ResetPasswordButton()
     {
+        FindObjectOfType<AudioManager>().Play("Click");
         var request = new SendAccountRecoveryEmailRequest
         {
             Email = emailInput.text,

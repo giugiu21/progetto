@@ -7,11 +7,13 @@ public class PlayOrGoBack : MonoBehaviour
 {
    public void PlayGame()
     {
+        FindObjectOfType<AudioManager>().Play("Click");
         SceneManager.LoadScene("Lv-1");
     }
 
     public void GoBack()
     {
+        FindObjectOfType<AudioManager>().Play("Click");
         SceneManager.LoadScene("MainMenu");
     }
 }

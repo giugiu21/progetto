@@ -19,6 +19,7 @@ public class PlayAgain : MonoBehaviour
     }
     public void GoToGameScene()
     {
+        FindObjectOfType<AudioManager>().Play("Click");
         SceneManager.LoadScene("Lv-1");
     }
 }
