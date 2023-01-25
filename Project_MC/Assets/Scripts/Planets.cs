@@ -8,14 +8,14 @@ public class Planets : MonoBehaviour
 
     private Shake shake;
 
-    private AudioManager audio;
+    
 
 
     void Start()
     {
         shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-        audio = GameObject.FindObjectOfType<AudioManager>();
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,7 +23,7 @@ public class Planets : MonoBehaviour
         if (collision.tag == "planets" || collision.tag == "bomb" || collision.tag == "meteor")
         {
             shake.CamShake();
-            audio.Play("DeathSound");
+            FindObjectOfType<AudioManager>().Play("DeathSound");
             gm.GameOver();
             Destroy(gameObject);
         }
