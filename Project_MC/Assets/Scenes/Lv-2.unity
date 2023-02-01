@@ -551,7 +551,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.32208967, g: 0.5416963, b: 0.8867924, a: 0}
+  m_BackGroundColor: {r: 0.45490196, g: 0.5137255, b: 0.9137255, a: 0.28235295}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -683,7 +683,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9973653, g: 1, b: 0.995283, a: 1}
     m_PressedColor: {r: 0.70980394, g: 0.9529412, b: 0.5176471, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.70980394, g: 0.9529412, b: 0.5176471, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1022,7 +1022,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   otherPlanet: {fileID: 791428550}
-  speed: 0.5
+  speed: 0.7
+--- !u!4 &491878605 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3167400144034038934, guid: 146caec47293347e19f6fcd1e27a1cd3, type: 3}
+  m_PrefabInstance: {fileID: 953135467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &783122877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,7 +1327,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9146848040948907161, guid: b0ee43af4d6504edeacce762cdd8205a, type: 3}
   m_PrefabInstance: {fileID: 791428541}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &791428551
+--- !u!114 &791428553
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1331,16 +1336,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 791428542}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f3f645b65ac7452896dc6b9005f6107, type: 3}
+  m_Script: {fileID: 11500000, guid: 27c3431ce80b2492c81311e195d989a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minX: -7.07
-  maxX: 7.07
-  minY: 3.5
-  maxY: -3.5
-  minSpeed: 1
-  maxSpeed: 1.5
-  secondToMaxDifficulty: 10
+  otherPlanet: {fileID: 1926411959}
+  speed: 0.5
 --- !u!1001 &953135467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2362,7 +2362,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.998138, g: 0.9764151, b: 1, a: 1}
     m_PressedColor: {r: 0.9647059, g: 0.5529412, b: 1, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.9647059, g: 0.5529412, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2449,8 +2449,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27c3431ce80b2492c81311e195d989a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherPlanet: {fileID: 791428550}
-  speed: 0.3
+  otherPlanet: {fileID: 491878605}
+  speed: 1
 --- !u!114 &1926411954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2500,6 +2500,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!4 &1926411959 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3167400144034038934, guid: 146caec47293347e19f6fcd1e27a1cd3, type: 3}
+  m_PrefabInstance: {fileID: 1932547399}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1932547399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2514,6 +2519,10 @@ PrefabInstance:
     - target: {fileID: 3167400144034038930, guid: 146caec47293347e19f6fcd1e27a1cd3, type: 3}
       propertyPath: m_Name
       value: Meteor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3167400144034038930, guid: 146caec47293347e19f6fcd1e27a1cd3, type: 3}
+      propertyPath: m_TagString
+      value: planets
       objectReference: {fileID: 0}
     - target: {fileID: 3167400144034038934, guid: 146caec47293347e19f6fcd1e27a1cd3, type: 3}
       propertyPath: m_RootOrder

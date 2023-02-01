@@ -78,7 +78,7 @@ public class GameMaster : MonoBehaviour
     {
         Resume();
         FindObjectOfType<AudioManager>().Play("Click");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Lv-1");
     }
 
     public void GoToMainMenu()
