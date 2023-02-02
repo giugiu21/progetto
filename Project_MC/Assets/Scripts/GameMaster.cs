@@ -28,8 +28,9 @@ public class GameMaster : MonoBehaviour
             Pause();
             if (SceneManager.GetActiveScene().name == "Lv-3")
             {
-                Resume();
-                Invoke("Congrats", 0.6f);
+                //Resume();
+                Invoke("Congrats", 0.01f);
+                
 
             }
             nextLevelPanel.SetActive(true);
@@ -42,6 +43,7 @@ public class GameMaster : MonoBehaviour
 
     private void Congrats()
     {
+        Resume();
         SceneManager.LoadScene("Congratulations");
     }
    
